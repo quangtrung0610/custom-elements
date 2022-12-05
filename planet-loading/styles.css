@@ -1,0 +1,224 @@
+:root {
+	--color: #e4dd23;
+	--moons-color: #40b6ce;
+	--shade1: #c2bc1e;
+	--shade2: #fffe28;
+}
+
+html,
+body {
+	height: 100%;
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-color: var(--moons-color);
+}
+
+a {
+	color: inherit;
+	text-decoration: none;
+}
+
+* {
+	box-sizing: border-box;
+	user-select: none;
+}
+
+.planet-loading {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	animation: scale 1s ease-out;
+}
+
+@keyframes scale {
+	0% {
+		scale: 0.001;
+	}
+}
+
+.space-stars-background {
+	width: 600px;
+	height: 600px;
+	position: absolute;
+}
+
+.space {
+	animation: rotate 10s linear infinite;
+	-webkit-animation: rotate 10s linear infinite;
+}
+
+.stars-shade {
+	width: 600px;
+	height: 600px;
+	position: absolute;
+	filter: blur(2px);
+	-webkit-filter: blur(2px);
+}
+
+@keyframes rotate {
+	100% {
+		transform: rotate(360deg);
+	}
+}
+
+.planet {
+	height: 200px;
+	width: 200px;
+	position: absolute;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border-radius: 100%;
+	background: var(--color);
+	transform: rotate(10deg);
+	animation: planet-shake 10s linear infinite alternate;
+	box-shadow: -6px -6px 10px var(--shade2);
+}
+
+@keyframes planet-shake {
+	0% {
+		transform: rotate(10deg);
+	}
+
+	100% {
+		transform: rotate(-10deg);
+	}
+}
+
+.cover-planet {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	clip-path: polygon(0 0, 100% 0, 100% 65%, 0 65%);
+	border-radius: 100%;
+	background-color: var(--color);
+}
+
+.planet-shade {
+	width: 100%;
+	height: 100%;
+	z-index: -1;
+	position: absolute;
+	border-radius: 100%;
+	box-shadow: inset -24px -16px 20px 30px #00000011,
+		inset -35px -22px 35px 0px #00000055, inset -15px -12px 20px 0px #00000066,
+		inset 10px 10px 35px 0px #00000022;
+	filter: blur(3px);
+}
+
+.shade-cover {
+	z-index: 1;
+	clip-path: polygon(0 0, 100% 0, 100% 65%, 0 65%);
+}
+
+.planet > span {
+	border-radius: 100%;
+	position: absolute;
+	background-color: var(--color);
+	box-shadow: inset 4px 4px 4px var(--shade1), inset -4px -4px 4px var(--shade2);
+}
+
+.planet > span:nth-of-type(1) {
+	height: 40px;
+	width: 40px;
+	top: 30px;
+	right: 50px;
+}
+
+.planet > span:nth-of-type(2) {
+	height: 20px;
+	width: 20px;
+	top: 30px;
+	left: 50px;
+}
+
+.planet > span:nth-of-type(3) {
+	height: 10px;
+	width: 10px;
+	bottom: 30px;
+	left: 50px;
+	z-index: -1;
+}
+
+.planet > span:nth-of-type(4) {
+	height: 50px;
+	width: 50px;
+	top: 70px;
+	left: 40px;
+}
+
+.planet > span:nth-of-type(5) {
+	height: 15px;
+	width: 15px;
+	top: 85px;
+	right: 30px;
+}
+
+.planet > span:nth-of-type(6) {
+	height: 20px;
+	width: 20px;
+	bottom: 30px;
+	right: 70px;
+	z-index: -1;
+}
+
+.planet > span:nth-of-type(7) {
+	height: 10px;
+	width: 10px;
+	bottom: 75px;
+	right: 75px;
+}
+
+.ring {
+	height: 350px;
+	width: 350px;
+	position: absolute;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border-radius: 100%;
+	transform: rotateX(110deg);
+	animation: spinning 3s ease infinite;
+}
+
+.ring > span {
+	width: 15px;
+	height: 45px;
+	left: -5px;
+
+	position: absolute;
+	border-radius: 100%;
+	background-color: var(--moons-color);
+	box-shadow: inset -3px 3px 4px rgba(0, 0, 0, 0.2),
+		-1px -1px 2px var(--moons-color);
+}
+
+.ring:nth-of-type(1) {
+	width: 350px;
+	height: 350px;
+	border: 25px solid #deca708f;
+	animation-delay: 0.2s;
+}
+.ring:nth-of-type(2) {
+	width: 400px;
+	height: 400px;
+	border: 25px solid #dec970cc;
+	animation-delay: 0.1s;
+	box-shadow: 0px 0px 10px 1px var(--shade2);
+}
+
+.ring:nth-of-type(3) > span {
+	left: -30px;
+}
+
+@keyframes spinning {
+	0% {
+		transform: rotateX(110deg) rotateZ(0deg);
+	}
+
+	100% {
+		transform: rotateX(110deg) rotateZ(360deg);
+	}
+}
