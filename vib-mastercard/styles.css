@@ -1,0 +1,168 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito&display=swap");
+html,
+body {
+	height: 100%;
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-color: #ffdee9;
+	background-image: linear-gradient(32deg, #ffdee9 0%, #b5fffc 100%);
+	font-family: "Nunito", sans-serif;
+	background-repeat: no-repeat;
+}
+
+a {
+	color: inherit;
+	text-decoration: none;
+}
+
+* {
+	box-sizing: border-box;
+	user-select: none;
+}
+
+.card-floating {
+	height: 14em;
+	width: 22em;
+	position: absolute;
+	display: flex;
+	border-radius: 1em;
+	background-color: #0f615d;
+	/* box-shadow: -8px 8px 15px 3px #00000055; */
+}
+
+.thickness {
+	height: 14em;
+	width: 22em;
+	border-radius: 2em;
+	position: absolute;
+	background-color: #0f615d;
+	transform: translateZ(-0.3em);
+}
+
+.thickness:nth-of-type(2) {
+	transform: translateZ(-0.6em);
+}
+.thickness:nth-of-type(3) {
+	transform: translateZ(-0.9em);
+}
+
+.shadow {
+	transition: 0.1s;
+	filter: drop-shadow(0px 0px 0px #00000055);
+}
+
+.background {
+	height: 100%;
+	width: 100%;
+	position: absolute;
+	display: flex;
+}
+.background > span {
+	height: 14em;
+	width: 11em;
+}
+.background > span:nth-of-type(1) {
+	border-radius: 1em 0 0 1em;
+	background-color: #26bdb6;
+}
+
+.background > span:nth-of-type(2) {
+	border-radius: 0 1em 1em 0;
+	background-color: #0f615d;
+}
+
+.card-body {
+	display: flex;
+	flex-direction: row;
+}
+.card {
+	position: absolute;
+}
+
+.logo {
+	height: 3rem;
+	width: 5rem;
+	top: 1em;
+	right: 1em;
+}
+
+.txt-logo {
+	width: 5em;
+	z-index: 1;
+}
+
+.symbol-logo {
+	right: 0;
+	width: 1.85em;
+}
+
+.card-header-left {
+	width: 100%;
+	position: absolute;
+	top: 0.5em;
+	color: hsl(1, 100%, 100%);
+	font-weight: bold;
+	font-size: 15px;
+	letter-spacing: 1.3px;
+}
+
+.card-left {
+	left: 1em;
+}
+
+.card-right {
+	right: 0.6em;
+}
+
+.card-middle {
+	width: 11em;
+	top: 5.5em;
+}
+
+.middle-content {
+	display: flex;
+	flex-direction: column;
+}
+
+.card-nfc {
+	left: 5.5em;
+}
+
+.mc-left {
+	left: 2.1875em;
+}
+.mc-right {
+	right: 1.5625em;
+}
+
+.card-arrow {
+	width: .5em;
+}
+
+.arrow-left {
+	top: 0.375em;
+}
+
+.arrow-right {
+	top: 2.1875em;
+}
+.card-chip {
+	background-color: rgb(207, 207, 207);
+	height: 1.875em;
+	border-radius: 10.5%;
+}
+
+.card-name {
+	color: white;
+	font-weight: bold;
+	margin: 0;
+	margin-top: .4em;
+	letter-spacing: 1px;
+}
+
+.card-footer {
+	right: .4em;
+	bottom: 0;
+}
